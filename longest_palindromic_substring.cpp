@@ -25,41 +25,29 @@ public:
             tail = head + 1;
             head_tmp = head;
             tail_tmp = tail;
-            if(s[head] != s[tail] && s[head - 1] != s[tail]) {
-                head = head_tmp + 1;
-                continue;
-            }
-            if(s[head] == s[tail]) {
-                while(s[head] == s[tail] && head >= 0 && tail < len) {
-                    head--;
-                    tail++;
+            for(int i = 0; i < 2; i++) {
+                if(s[head - i] == s[tail]) {
+                    head = head - i;
+                    while(s[head] == s[tail] && head >= 0 && tail < len) {
+                        head--;
+                        tail++;
+                    }
+                    index_pair ret_tmp = {head + 1, tail - head - 1};
+                    rets.push_back(ret_tmp);
                 }
-                index_pair ret_tmp = {head + 1, tail - head - 1};
-                rets.push_back(ret_tmp);
-            }
-            head = head_tmp;
-            tail = tail_tmp;
-            if(s[head - 1] == s[tail]) {
-                head--;
-                while(s[head] == s[tail] && head >= 0 && tail < len) {
-                    head--;
-                    tail++;
-                }
-                index_pair ret_tmp = {head + 1, tail - head - 1};
-                rets.push_back(ret_tmp);
+                head = head_tmp;
+                tail = tail_tmp;
             }
             head = head_tmp + 1;
         }
-        vector<index_pair>::iterator it_max;
         vector<index_pair>::iterator it = rets.begin();
+        vector<index_pair>::iterator it_max = it;
         int max_length = 0;
-        while(it != rets.end()) {
-            if(max_length < (*it).length) {
-                max_length = (*it).length;
-                it_max = it;
-            }
-            it++;
+        do {
+            it_max = max_length < (*it).length ? it : it_max;
+            max_length = max_length < (*it).length ? (*it).length : max_length;
         }
+        while(++it != rets.end());
         return s.substr((*it_max).pos, (*it_max).length);
     }
 };
