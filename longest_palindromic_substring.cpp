@@ -18,11 +18,13 @@ public:
         int head;
         int tail;
         int head_tmp;
-        head = 2;
+        int tail_tmp;
+        head = 0;
         vector<index_pair> rets;
         while(head < len - 1) {
             tail = head + 1;
             head_tmp = head;
+            tail_tmp = tail;
             if(s[head] != s[tail] && s[head - 1] != s[tail]) {
                 head = head_tmp + 1;
                 continue;
@@ -36,6 +38,7 @@ public:
                 rets.push_back(ret_tmp);
             }
             head = head_tmp;
+            tail = tail_tmp;
             if(s[head - 1] == s[tail]) {
                 head--;
                 while(s[head] == s[tail] && head >= 0 && tail < len) {
@@ -51,9 +54,7 @@ public:
         vector<index_pair>::iterator it = rets.begin();
         int max_length = 0;
         while(it != rets.end()) {
-            cout << (*it).pos << "    " << (*it).length << endl;
             if(max_length < (*it).length) {
-                cout << "max_length " << max_length << " less than (*it).length " << (*it).length << endl;
                 max_length = (*it).length;
                 it_max = it;
             }
@@ -70,7 +71,7 @@ int main(int argc, char* argv[]) {
         s = s_tmp;
     }
     else {
-        string s_tmp("kabcdcbam");
+        string s_tmp("ccd");
         s = s_tmp;
     }
     Solution sol;
