@@ -1,5 +1,5 @@
 add_library(map_cases SHARED
-    two_sum.cc
+    1_two_sum.cc
 )
 
 install(TARGETS map_cases

@@ -1,5 +1,5 @@
 add_library(link_list_cases SHARED
-    add_two_numbers.cc
+    2_add_two_numbers.cc
 )
 
 install(TARGETS link_list_cases
