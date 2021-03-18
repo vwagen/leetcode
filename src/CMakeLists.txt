@@ -2,11 +2,13 @@ add_subdirectory(common)
 add_subdirectory(map)
 add_subdirectory(link_list)
 add_subdirectory(sliding_window)
+add_subdirectory(sorting)
 
 add_executable(leetcode leetcode.cc)
 target_link_libraries(leetcode utils)
 target_link_libraries(leetcode map_cases)
 target_link_libraries(leetcode sliding_window_cases)
+target_link_libraries(leetcode sorting_cases)
 
 if(ASAN_FOUND)
     target_link_libraries(leetcode ${ASAN_LIBRARIES})
