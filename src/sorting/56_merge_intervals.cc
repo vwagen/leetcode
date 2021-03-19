@@ -2,16 +2,6 @@
 #include <algorithm>
 using namespace std;
 
-void print_intervals(const vector<vector<int>>& v)
-{
-    printf("[");
-    for (int i = 0; i < v.size(); i++)
-    {
-        printf("[%d, %d]%s", v[i][0], v[i][1], i < v.size() - 1 ? ", " : "");
-    }
-    printf("]\n");
-}
-
 class Solution
 {
 public:

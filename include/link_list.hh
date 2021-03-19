@@ -1,3 +1,5 @@
+#pragma once
+
 #include "utils.hh"
 #include "list_node.hh"
 
