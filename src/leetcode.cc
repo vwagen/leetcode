@@ -8,7 +8,8 @@ int main()
     //run_reverse_link_list_ii_case();
     //run_merge_intervals_56();
     //run_insert_interval_57();
-    run_median_of_two_sorted_arrays_4();
+    //run_median_of_two_sorted_arrays_4();
+    run_sort_colors_75();
     fflush(stdout);
     return 0;
 }

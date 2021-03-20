@@ -3,6 +3,7 @@ add_library(sorting_cases SHARED
     56_merge_intervals.cc
     57_insert_interval.cc
     4_median_of_two_sorted_arrays.cc
+    75_sort_colors.cc
 )
 
 install(TARGETS sorting_cases
