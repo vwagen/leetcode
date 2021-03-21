@@ -5,6 +5,7 @@ add_library(sorting_cases SHARED
     4_median_of_two_sorted_arrays.cc
     75_sort_colors.cc
     147_insertion_sort_list.cc
+    148_sort_list.cc
 )
 
 install(TARGETS sorting_cases

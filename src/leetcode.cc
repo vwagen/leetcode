@@ -17,7 +17,8 @@ int main()
     //run_insert_interval_57();
     //run_median_of_two_sorted_arrays_4();
     //run_sort_colors_75();
-    run_insertion_sort_list_147();
+    //run_insertion_sort_list_147();
+    run_sort_list_148();
 
     fflush(stdout);
     return 0;
