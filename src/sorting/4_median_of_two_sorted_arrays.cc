@@ -2,6 +2,15 @@
 #include <algorithm>
 using namespace std;
 
+/*
+ * 思路1：
+ * 用两个指针分别遍历两个数组，(nums1.size() + nums2.size()) % 2 == 1 时找到第 k（k = (nums1.size() + nums2.size()) / 2）个数，
+ * 否则还要找到第 k + 1 个数。然后加起来再除以 2。
+ *
+ * 思路2：
+ * 使用在 n 个有序数组中找第 k 个元素的算法。待学习。
+ * */
+
 class Solution
 {
 public:
