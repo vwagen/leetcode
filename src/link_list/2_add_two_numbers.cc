@@ -65,7 +65,7 @@ void free_list_nodes(ListNode* l)
     }
 }
 
-void run_add_two_numbers_case()
+void run_add_two_numbers_2()
 {
     std::string num1 = "942";
     std::string num2 = "9465";

@@ -6,6 +6,7 @@ add_subdirectory(sorting)
 
 add_executable(leetcode leetcode.cc)
 target_link_libraries(leetcode utils)
+target_link_libraries(leetcode link_list_cases)
 target_link_libraries(leetcode map_cases)
 target_link_libraries(leetcode sliding_window_cases)
 target_link_libraries(leetcode sorting_cases)

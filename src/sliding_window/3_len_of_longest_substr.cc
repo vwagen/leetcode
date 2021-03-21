@@ -46,7 +46,7 @@ public:
     }
 };
 
-void run_len_of_longest_substr()
+void run_len_of_longest_substr_3()
 {
     Solution solution;
     const char* s = "abcdabc";

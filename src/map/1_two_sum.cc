@@ -92,7 +92,7 @@ static vector<int> twoSum_best(vector<int>& nums, int target)
     return ret;
 }
 
-void run_two_sum_case()
+void run_two_sum_1()
 {
     vector<int> nums = {3, 2, 4};
     int target = 6;

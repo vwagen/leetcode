@@ -1,7 +1,5 @@
 #pragma once
 
-#include "utils.hh"
-
 /* Definition for singly-linked list. */
 struct ListNode {
     int val;

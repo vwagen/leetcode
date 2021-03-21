@@ -2,6 +2,6 @@
 
 #include "utils.hh"
 
-void run_two_sum_case();
+void run_two_sum_1();
 
-void run_len_of_longest_substr();
+void run_len_of_longest_substr_3();
