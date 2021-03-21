@@ -3,6 +3,7 @@
 #include "list_node.hh"
 
 #include <stdio.h>
+#include <math.h>
 #include <string>
 #include <vector>
 #include <unordered_map>

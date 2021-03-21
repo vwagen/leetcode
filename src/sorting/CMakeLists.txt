@@ -6,6 +6,7 @@ add_library(sorting_cases SHARED
     75_sort_colors.cc
     147_insertion_sort_list.cc
     148_sort_list.cc
+    164_maximum_gap.cc
 )
 
 install(TARGETS sorting_cases
