@@ -1,7 +1,10 @@
-add_library(sliding_window_cases SHARED
-    3_len_of_longest_substr.cc
-)
+file(GLOB files "*.cc")
 
-install(TARGETS sliding_window_cases
-        LIBRARY DESTINATION lib
-        ARCHIVE DESTINATION libstatic)
+foreach(file_path ${files})
+    get_filename_component(file ${file_path} NAME)
+    add_executable(${file}.run ${CMAKE_CURRENT_SOURCE_DIR}/${file})
+    target_link_libraries(${file}.run utils)
+    install(TARGETS ${file}.run
+            RUNTIME DESTINATION bin)
+endforeach(file_path)
+

@@ -1,4 +1,4 @@
-#include "sorting.hh"
+#include "utils.hh"
 
 class Solution
 {
@@ -96,7 +96,7 @@ public:
     }
 };
 
-void run_reverse_link_list_ii_case_92()
+int main(int argc,char *argv[])
 {
     Solution solution;
     std::vector<int> v = {1,2,3,4,5};
@@ -109,4 +109,7 @@ void run_reverse_link_list_ii_case_92()
     print_list_nodes(ret);
 
     free_list_nodes(l);
+
+    fflush(stdout);
+    return 0;
 }

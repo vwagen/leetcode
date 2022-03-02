@@ -1,4 +1,4 @@
-#include "map_cases.hh"
+#include "utils.hh"
 using namespace std;
 
 class Solution
@@ -46,9 +46,12 @@ public:
     }
 };
 
-void run_len_of_longest_substr_3()
+int main(int argc,char *argv[])
 {
     Solution solution;
     const char* s = "abcdabc";
     printf("%d\n", solution.lengthOfLongestSubstring(s));
+
+    fflush(stdout);
+    return 0;
 }

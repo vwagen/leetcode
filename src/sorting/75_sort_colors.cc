@@ -1,4 +1,4 @@
-#include "sorting.hh"
+#include "utils.hh"
 #include <algorithm>
 using namespace std;
 
@@ -31,11 +31,14 @@ public:
     }
 };
 
-void run_sort_colors_75()
+int main(int argc,char *argv[])
 {
     Solution solution;
     vector<int> v = {2, 1, 2};
     print_int_vector(v);
     solution.sortColors(v);
     print_int_vector(v);
+
+    fflush(stdout);
+    return 0;
 }

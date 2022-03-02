@@ -1,4 +1,4 @@
-#include "map_cases.hh"
+#include "utils.hh"
 using namespace std;
 
 static void qsort(vector<int>& nums, vector<int>& indices, int low, int high)
@@ -92,7 +92,7 @@ static vector<int> twoSum_best(vector<int>& nums, int target)
     return ret;
 }
 
-void run_two_sum_1()
+int main(int argc,char *argv[])
 {
     vector<int> nums = {3, 2, 4};
     int target = 6;
@@ -104,4 +104,7 @@ void run_two_sum_1()
         printf("%d,", i);
     }
     printf("]\n");
+
+    fflush(stdout);
+    return 0;
 }

@@ -1,4 +1,4 @@
-#include "sorting.hh"
+#include "utils.hh"
 
 class Solution
 {
@@ -47,7 +47,7 @@ public:
     }
 };
 
-void run_insertion_sort_list_147()
+int main(int argc,char *argv[])
 {
     Solution solution;
     std::vector<int> v = {-1, 5, 3, 4, 0};
@@ -58,4 +58,7 @@ void run_insertion_sort_list_147()
     print_list_nodes(ret);
 
     free_list_nodes(l);
+
+    fflush(stdout);
+    return 0;
 }

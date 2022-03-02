@@ -1,4 +1,4 @@
-#include "sorting.hh"
+#include "utils.hh"
 #include <algorithm>
 using namespace std;
 
@@ -71,11 +71,14 @@ public:
 
 };
 
-void run_merge_intervals_56()
+int main(int argc,char *argv[])
 {
     Solution solution;
     vector<vector<int>> v = {{1, 3}, {2, 6}, {8, 10}, {12, 12}, {15, 18}};
     print_intervals(v);
     vector<vector<int>> ret = solution.merge_not_sort(v);
     print_intervals(ret);
+
+    fflush(stdout);
+    return 0;
 }

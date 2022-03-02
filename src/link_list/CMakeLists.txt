@@ -1,7 +1,10 @@
-add_library(link_list_cases SHARED
-    2_add_two_numbers.cc
-)
+file(GLOB files "*.cc")
 
-install(TARGETS link_list_cases
-        LIBRARY DESTINATION lib
-        ARCHIVE DESTINATION libstatic)
+foreach(file_path ${files})
+    get_filename_component(file ${file_path} NAME)
+    add_executable(${file}.run ${CMAKE_CURRENT_SOURCE_DIR}/${file})
+    target_link_libraries(${file}.run utils)
+    install(TARGETS ${file}.run
+            RUNTIME DESTINATION bin)
+endforeach(file_path)
+

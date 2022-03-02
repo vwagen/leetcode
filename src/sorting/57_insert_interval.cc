@@ -1,4 +1,4 @@
-#include "sorting.hh"
+#include "utils.hh"
 #include <algorithm>
 using namespace std;
 
@@ -60,7 +60,7 @@ public:
 
 };
 
-void run_insert_interval_57()
+int main(int argc,char *argv[])
 {
     Solution solution;
     //vector<vector<int>> v = {{1, 3}, {5, 6}, {8, 10}, {12, 12}, {15, 18}};
@@ -70,4 +70,7 @@ void run_insert_interval_57()
     printf("Input: [%d, %d]\n", interval[0], interval[1]);
     vector<vector<int>> ret = solution.insert(v, interval);
     print_intervals(ret);
+
+    fflush(stdout);
+    return 0;
 }

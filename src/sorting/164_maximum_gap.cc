@@ -1,4 +1,4 @@
-#include "sorting.hh"
+#include "utils.hh"
 #include <algorithm>
 using namespace std;
 
@@ -82,11 +82,14 @@ public:
     }
 };
 
-void run_maximum_gap_164()
+int main(int argc,char *argv[])
 {
     Solution solution;
     vector<int> v = {1,10000000};
     print_int_vector(v);
     int gap = solution.maximumGap(v);
     printf("Maximum gap: %d\n", gap);
+
+    fflush(stdout);
+    return 0;
 }

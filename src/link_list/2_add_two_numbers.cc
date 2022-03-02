@@ -1,4 +1,5 @@
-#include "link_list.hh"
+#include "utils.hh"
+#include "list_node.hh"
 #include <algorithm>
 
 void print_list_nodes(ListNode* l)
@@ -65,7 +66,7 @@ void free_list_nodes(ListNode* l)
     }
 }
 
-void run_add_two_numbers_2()
+int main(int argc,char *argv[])
 {
     std::string num1 = "942";
     std::string num2 = "9465";
@@ -79,4 +80,7 @@ void run_add_two_numbers_2()
 
     free_list_nodes(l1);
     free_list_nodes(l2);
+
+    fflush(stdout);
+    return 0;
 }

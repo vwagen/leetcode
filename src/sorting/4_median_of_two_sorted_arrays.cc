@@ -1,4 +1,4 @@
-#include "sorting.hh"
+#include "utils.hh"
 #include <algorithm>
 using namespace std;
 
@@ -54,11 +54,14 @@ public:
     }
 };
 
-void run_median_of_two_sorted_arrays_4()
+int main(int argc,char *argv[])
 {
     Solution solution;
     vector<int> v1 = {1, 2, 3, 7};
     vector<int> v2 = {2, 4, 8};
     double ret = solution.findMedianSortedArrays(v1, v2);
     printf("ret: %f\n", ret);
+
+    fflush(stdout);
+    return 0;
 }
